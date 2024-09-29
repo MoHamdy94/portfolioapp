@@ -1,11 +1,9 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import './ProjectDetails.css';
 
 function ProjectDetails() {
-  const { id } = useParams(); // Get the project ID from the URL
+  const { id } = useParams(); 
 
-  // Fetch the project details using the ID (static data for now)
   const project = {
     id: id,
     title: `Project ${id}`,
