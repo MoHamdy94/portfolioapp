@@ -9,8 +9,6 @@ import ProjectDetails from "./component/Projectdetails";
 import Footer from "./component/5-Footer/footer";
 // import ScrollToTop from 'react-scroll-to-top';
 
-
-
 const projects = [
   {
     id: "1",
@@ -121,22 +119,20 @@ const projects = [
 function App() {
   return (
     <Router>
-<Header /> {}
-<Hero /> {}
-        <Routes>
-          <Route path="/projects" element={<Projects projects={projects} />} />
-          <Route
-            path="/projects/:id"
-            element={<ProjectDetails projects={projects} />}
-          />
-         <Route path="/contact" element={<Contact Contact={Contact} />} />
-        </Routes>
+      <Header />
+      {/* <Hero /> */}
+      <Routes>
+        <Route path="/" element={<Hero/>}/>
+        <Route path="/projects" element={<Projects projects={projects} />} />
+        <Route
+          path="/projects/:id"
+          element={<ProjectDetails projects={projects} />}
+        />
+        <Route path="/contact" element={<Contact Contact={Contact} />} />
+      </Routes>
 
-        <Footer />
-
+      <Footer />
     </Router>
-
-
   );
 }
 
