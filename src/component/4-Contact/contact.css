@@ -1,3 +1,8 @@
+.flex  {
+    display: flex;
+    flex-direction: row;
+}
+
 section.contact-us .icon-envelope {
     color: var(--subtitle);
     margin-right: 1rem;
@@ -82,8 +87,10 @@ section.contact-us #message {
 }
 
 section.contact-us .submit {
+   
     background-color: rgba(36, 37, 46, 1);
-
+justify-content: center;
+align-items: center;
     padding: 0.75rem 2rem;
     text-align: center;
     font-size: 1.05rem;
@@ -135,6 +142,7 @@ section.contact-us .submit:hover {
     section.contact-us .submit {
         width: 30%;
         align-self: center;
+        
     }
 
 }
