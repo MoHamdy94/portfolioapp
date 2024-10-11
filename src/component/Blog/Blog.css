@@ -1,6 +1,6 @@
 .blog {
     padding: 50px 0;
-    background: #fff;
+    color: var(--subtitle);
   }
   
   .container {
@@ -24,6 +24,7 @@
   .img img {
     width: 100%;
     height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
+    
   }
   
   .details {

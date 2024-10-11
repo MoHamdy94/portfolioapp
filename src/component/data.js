@@ -124,7 +124,7 @@ export const blog = [
     title: "Diving into PHP",
     desc: "PHP is a widely-used server-side scripting language designed for web development. This article explores PHP's syntax, functions, and how to interact with databases. You'll learn how to create dynamic web pages and understand the basics of server-side programming.",
     category: "Programming",
-    cover: "../images/blogs/b6.jpeg",
+    cover: "../images/blogs/b6.jpg",
     date: "January 10, 2018",
   },
 ]

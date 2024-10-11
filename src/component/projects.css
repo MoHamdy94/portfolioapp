@@ -76,7 +76,7 @@ button.active {
   border-radius: 8px;
   border-color: rgb(163, 175, 240);
   border-style: solid;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.440);
+  /* border-bottom: 2px solid rgba(255, 255, 255, 0.440); */
   border-left: 2px #29252D outset;
   /* box-shadow: -40px 50px 30px rgba(117, 114, 114, 0.28); */
   transform: skewX(3deg);
@@ -88,7 +88,7 @@ button.active {
 .card:hover {
   /* transform: translateY(-5px);
       box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15); */
-  height: 300px;
+  height: 325px;
   transform: skew(0deg);
 
 }
@@ -131,3 +131,10 @@ img:hover {
   opacity: 1;
   filter: unset;
 }
+
+/* .box2 {
+  .your-element {
+    border: none;    
+}
+
+} */

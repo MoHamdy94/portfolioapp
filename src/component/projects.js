@@ -48,7 +48,7 @@ const Projects = ({projects}) => {
           return (
             <article key={project.id} className="card">
               <img src={project.img} alt={project.title} />
-              <div className="box">
+              <div className="box2">
                 <h1 className="title">{project.title}</h1>
                 <p className="sub-title">{project.description}</p>
                 <div className="details">
