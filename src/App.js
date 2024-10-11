@@ -7,6 +7,8 @@ import Contact from "./component/4-Contact/contact";
 import Hero from "./component/2-Hero/hero";
 import ProjectDetails from "./component/Projectdetails";
 import Footer from "./component/5-Footer/footer";
+import Blog from "./component/Blog/Blog"; 
+import { Detail } from './component/Detail/Detail'; // Ensure this import is correct
 // import ScrollToTop from 'react-scroll-to-top';
 
 const projects = [
@@ -123,6 +125,8 @@ function App() {
       {/* <Hero /> */}
       <Routes>
         <Route path="/" element={<Hero/>}/>
+        <Route path="/Blog" element={<Blog />} /> 
+        <Route path="/details/:id" element={<Detail />} />
         <Route path="/projects" element={<Projects projects={projects} />} />
         <Route
           path="/projects/:id"

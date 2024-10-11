@@ -1,0 +1,46 @@
+.blog {
+    padding: 50px 0;
+    background: #fff;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px; /* المسافة بين العناصر */
+  }
+  
+  .box {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden; /* لمنع تجاوز المحتوى */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+    transition: transform 0.3s ease; /* انتقال سلس عند التفاعل */
+  }
+  
+  .box:hover {
+    transform: scale(1.05); /* تكبير عند المرور فوق */
+  }
+  
+  .img img {
+    width: 100%;
+    height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
+  }
+  
+  .details {
+    padding: 20px;
+  }
+  
+  .details h3 {
+    margin: 10px 0;
+  }
+  
+  .details p {
+    margin: 10px 0;
+  }
+  
+  .date {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
