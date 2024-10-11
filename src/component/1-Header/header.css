@@ -74,23 +74,29 @@ header button.menu {
 header .icon-menu,
 header button.mode {
     background-color: var(--bgheader);
-    height: 3rem;
-    width: 3rem;
-    border-radius: 55px;
+    height: 2rem;
+    width: 4rem;
+    border-radius: 80px;
     justify-content: center;
     text-align: center;
     color: var(--subtitle);
     /* border: 1px solid rgba(244, 165, 96, 0.249); */
     transition: 0.3s;
     box-shadow: 1px 1px 40px rgba(35, 35, 36, 0.165);
-    margin-top: .4rem;
+    margin-top: .3rem;
 
 }
 
+header button.mode{
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+
 header .icon-menu:hover,
 header button.mode:hover {
-    /* color: var(--title); */
-    /* border: 1px solid rgb(244, 165, 96); */
+    color: var(--title);
+    border: 1px solid rgb(244, 165, 96);
 
 
 
