@@ -1,25 +1,32 @@
-
-
-footer.flex{
+footer.flex {
     justify-content: space-between;
     padding-bottom: 1.9rem;
+    margin-top: 30px;
+    box-shadow: 1px 1px 20px rgba(144, 142, 142, 0.23);
+    padding-top: 10px;
+
 }
 
-footer.flex ul{
+footer.flex ul {
+    display: flex;
+    flex-direction: row;
     gap: 1rem;
+    list-style-type: none; 
+
+
 
 }
 
 
-footer.flex  ul  a{
+footer.flex ul a {
     color: var(--subtitle);
-    font-size: 0.9rem ;
+    font-size: 0.9rem;
     font-weight: 400;
 
 }
 
 
-footer.flex  ul  a:hover{
+footer.flex ul a:hover {
     color: var(--blue);
     font-size: 1rem;
     font-weight: 500;
@@ -28,16 +35,16 @@ footer.flex  ul  a:hover{
 
 
 
-footer.flex p{
+footer.flex p {
     color: rgb(113, 113, 122);
 }
 
-@media (max-width: 800px)    {
+@media (max-width: 800px) {
 
 
-    footer.flex{
+    footer.flex {
         flex-direction: column;
         gap: 2rem;
     }
-    
+
 }

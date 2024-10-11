@@ -1,12 +1,12 @@
-body {
+/* body {
   background-color: #242426; 
-}
+} */
 
 
 .all-section {
   display: flex;
   gap: 5rem;
-  background-color: #242426;
+  /* background-color: #242426; */
 }
 
 

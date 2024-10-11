@@ -2,10 +2,11 @@ import "./App.css";
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Projects from "./component/projects";
-import ProjectDetails from "./component/Projectdetails";
 import Header from "./component/1-Header/header";
 import Contact from "./component/4-Contact/contact";
 import Hero from "./component/2-Hero/hero";
+import ProjectDetails from "./component/Projectdetails";
+import Footer from "./component/5-Footer/footer";
 // import ScrollToTop from 'react-scroll-to-top';
 
 
@@ -120,33 +121,22 @@ const projects = [
 function App() {
   return (
     <Router>
-      <div className="App">
-        <Header />
-
-        <Hero />
-        <div className="divider" />
-        <Contact />
-        <div className="divider" />
-        <footer />
-        {/* <ScrollToTop
-          style={{
-            width: "2",
-            height: "2",
-            borderRadius: "50%",
-            border: "1px solid #3fff",
-            fontSize: "1px",
-          }}
-          className="smothy"
-        ></ScrollToTop> */}
+<Header /> {}
+<Hero /> {}
         <Routes>
           <Route path="/projects" element={<Projects projects={projects} />} />
           <Route
             path="/projects/:id"
             element={<ProjectDetails projects={projects} />}
           />
+         <Route path="/contact" element={<Contact Contact={Contact} />} />
         </Routes>
-      </div>
+
+        <Footer />
+
     </Router>
+
+
   );
 }
 

@@ -6,16 +6,16 @@ const Footer = () =>{
 
         <ul className="flex">
             <li>
-                <a href="">About</a> 
+                <a href="#bout">About</a> 
             </li>
             <li>
-                <a href="">Projects</a> 
+                <a href="projects">Projects</a> 
             </li>
             <li>
-                <a href="">Speaking</a> 
+                <a href="#Speaking">Speaking</a> 
             </li>
             <li>
-                <a href="">Uses</a> 
+                <a href="#Uses">Uses</a> 
             </li>
         </ul>
 

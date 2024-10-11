@@ -1,8 +1,8 @@
-
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./header.css";
-
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
     const [showModel, setshowModel] = useState(false);
@@ -24,24 +24,34 @@ const Header = () => {
 
     return (
         <header className=" flex">
-            <button onClick={() => {
+            {/* <button onClick={() => {
                 setshowModel(true)
-            }} className="menu icon-menu flex"> </button>
+            }} className="menu icon-menu flex"> </button> */}
+
+<button onClick={() => {
+                localStorage.setItem("currentMode", theme === "dark" ? "light" : "dark");
+                setTheme(localStorage.getItem("currentMode"));
+            }} className="menu icon-menu flex">
+                {theme === "dark" ? (
+                    <FontAwesomeIcon icon={faMoon} />
+                ) : (
+                    <FontAwesomeIcon icon={faSun} />
+                )}
+            </button>
 
 
             <div />
 
 
             <nav>
-                <ul className="flex">
-                    <li><a href="">About</a></li>
-                    <li><a href="">Articles</a></li>
-                    <li><a href="">Projects</a></li>
-                    <li><a href="">Speaking</a></li>
-                    <li><a href="">Contact</a></li>
-                </ul>
+            <ul className="flex">
+    <li><Link to="#about">About</Link></li>
+    <li><Link to="#articles">Articles</Link></li>
+    <li><Link to="projects">Projects</Link></li>
+    <li><Link to="contact">Contact</Link></li>
+</ul>
             </nav>
-            <button onClick={() => {
+            {/* <button onClick={() => {
                 localStorage.setItem("currentMode", theme === "dark" ? "light" : "dark")
                 setTheme(localStorage.getItem("currentMode"))
             }} className="mode flex"
@@ -49,6 +59,17 @@ const Header = () => {
 
 
                 {theme === "dark" ? (<span className="icon-moon-o"></span>) : (<span className="icon-sun"></span>)}
+            </button> */}
+
+<button onClick={() => {
+                localStorage.setItem("currentMode", theme === "dark" ? "light" : "dark");
+                setTheme(localStorage.getItem("currentMode"));
+            }} className="mode flex">
+                {theme === "dark" ? (
+                    <FontAwesomeIcon icon={faMoon} />
+                ) : (
+                    <FontAwesomeIcon icon={faSun} />
+                )}
             </button>
 
             {showModel && (<div className="fixed">
@@ -63,11 +84,11 @@ const Header = () => {
 
 
                     </li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Articles</a></li>
-                    <li><a href="">Projects</a></li>
-                    <li><a href="">Speaking</a></li>
-                    <li><a href="">Uses</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#articles">Articles</a></li>
+                    <li><a href="./projects">Projects</a></li>
+                    <li><a href="#speaking">Speaking</a></li>
+                    <li><a href="./contact">Contact</a></li>
                 </ul>
 
             </div>)}
