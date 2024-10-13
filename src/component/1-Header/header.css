@@ -27,7 +27,7 @@ header .flex a {
 
 
 
-header ul.flex {
+.allnav {
     
     display: flex;
     flex-direction: row;
@@ -39,18 +39,20 @@ header ul.flex {
 }
 
 
-header ul li a {
+.navbar .nav-link {
     color: var(--title);
     opacity: 0.6;
     font-size: 1.5rem;
     font-weight: 400;
     transition: 0.3s;
     text-decoration: none;
+    margin-right: 30px; 
+    
 }
 
 
-header ul li a:hover {
-    color: var(--blue);
+.navbar .nav-link:hover {
+    color:aqua;
     opacity: 1;
     font-size: 2rem;
     font-weight: 500;
@@ -74,31 +76,31 @@ header button.menu {
 header .icon-menu,
 header button.mode {
     background-color: var(--bgheader);
-    height: 2rem;
+    /* height: 2rem; */
     width: 4rem;
     border-radius: 80px;
     justify-content: center;
-    text-align: center;
+    align-items: center;
+    /* text-align: center; */
     color: var(--subtitle);
     /* border: 1px solid rgba(244, 165, 96, 0.249); */
     transition: 0.3s;
-    box-shadow: 1px 1px 40px rgba(35, 35, 36, 0.165);
-    margin-top: .3rem;
+    /* box-shadow: 1px 1px 40px rgba(35, 35, 36, 0.165); */
+    /* margin-top: .5rem; */
+    border: none;
 
 }
 
 header button.mode{
-    margin-top: 15px;
+    /* margin-top: 20px; */
     margin-left: 20px;
 }
 
 
 header .icon-menu:hover,
 header button.mode:hover {
-    color: var(--title);
-    border: 1px solid rgb(244, 165, 96);
-
-
+    /* color: var(--title); */
+    /* border: 1px solid rgb(244, 165, 96); */
 
 }
 
@@ -188,7 +190,7 @@ header .fixed ul.model li a {
 /* ----------------------------------------------
 4-responsive design
 ---------------------------------------------- */
-@media (max-width: 700px) {
+@media (max-width: 600px) {
     header.flex nav {
         display: none;
 
@@ -211,3 +213,4 @@ body.dark {
     background-color: #242426;
     color: white;
 }
+

@@ -18,7 +18,7 @@ const Contact = () => {
             <p className="sub-title">contact us for more information and get notified when i publish something new.</p>
 
             <div style={{ justifyContent: "space-between" }} className="flex">
-                <form onSubmit={handleSubmit} className="form">
+                <form onSubmit={handleSubmit} className="forma">
                     <div className="flex">
                         <label htmlFor="email">Email Address:</label>
                         <input autoComplete='off' required type="email" name="email" id="email" />

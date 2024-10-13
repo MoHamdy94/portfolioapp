@@ -3,6 +3,10 @@ import { useEffect, useState } from "react";
 import "./header.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
 const Header = () => {
     const [showModel, setshowModel] = useState(false);
@@ -43,14 +47,31 @@ const Header = () => {
             <div />
 
 
-            <nav>
+            <Navbar expand="lg" className="allnav">
+      <Container className="flex">
+       
+          <Nav className="me-auto">
+            <Nav.Link href="/">About</Nav.Link>
+            <Nav.Link href="projects">Projects</Nav.Link>
+            <Nav.Link href="Blog">Articles</Nav.Link>
+            <Nav.Link href="contact">Contact</Nav.Link>
+          </Nav>
+      </Container>
+    </Navbar>
+
+
+
+
+            {/* <nav>
             <ul className="flex">
     <li><Link to="/">About</Link></li>
     <li><Link to="projects">Projects</Link></li>
     <li><Link to="Blog">Articles</Link></li>    
     <li><Link to="contact">Contact</Link></li>
 </ul>
-            </nav>
+            </nav> */}
+
+
             {/* <button onClick={() => {
                 localStorage.setItem("currentMode", theme === "dark" ? "light" : "dark")
                 setTheme(localStorage.getItem("currentMode"))
