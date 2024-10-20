@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+Header Component (header.js)
+The header component uses the following main features:
+•	Theme Management:
+•	The state variable theme is used to track the current theme (light or dark), and local Storage is used to persist the theme between sessions.
+•	The useEffect hook applies the appropriate theme to the body class based on the value of theme.
+•	Navigation Bar:
+•	Uses Navbar, Nav, and Container components from react-bootstrap for styling and structure.
+•	The navigation links are created using Nav.Link elements and link to different sections of the site.
+•	Modal Menu:
+•	The modal is shown/hidden based on the showModel state.
+•	Clicking the close button or outside the menu sets showModel to false.
+•	CSS File (header.css)
+•	The CSS file defines the styles for both the header and modal components, including styles for the light and dark themes.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Hero Component (Hero.js)
+The Hero component uses the following main features:
+•	Lottie Animation:
+•	The animation is displayed using the Lottie component from the lottie-react package.
+•	The animation data is imported from a JSON file.
+•	Social Media Links:
+•	The links are displayed as icons using FontAwesome.
+•	The icons are wrapped in anchor tags to make them clickable and open in a new tab.
+•	Text Content:
+•	Includes a title and a subtitle to introduce the user or project.
+•	CSS File (hero.css)
+The CSS file defines the styles for the hero section, including layout, animation, and theme-specific styles.
 
-## Available Scripts
+Projects Component (Projects.js)
+The Projects component consists of the following main parts:
+•	State Management:
+o	Uses React's useState to manage the filter state (filter) for displaying different categories of projects.
+o	When the filter state changes, the component displays the projects matching the selected category.
+•	Filtering Logic:
+o	The handleFilter function updates the filter state based on the selected category.
+o	The filteredProjects variable contains the projects to be displayed, determined by the selected filter.
+•	Rendering:
+o	The component renders two main sections:
+	Filter Buttons: Allows users to filter the projects by category.
+	Project Cards: Displays a list of project cards that match the current filter.
+o	Each project card includes an image, title, description, and a "View Details" link.
 
-In the project directory, you can run:
+ProjectDetails.js
+The ProjectDetails component performs the following tasks:
+•	Extracts the project ID from the URL:
+o	Uses the useParams hook from react-router-dom to get the id parameter.
+•	Finds the corresponding project:
+o	Searches the projects array to find the project matching the given ID.
+•	Renders project details:
+o	Displays the project's image, title, and description in a responsive layout.
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Blogs.js
+The Blogs component performs the following tasks:
+•	rendering a list of blog posts with essential features like navigation, categorization, and engagement metrics.
+•	It utilizes responsive design principles through CSS and React's mapping capabilities to render dynamic content efficiently.
