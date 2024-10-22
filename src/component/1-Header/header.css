@@ -70,6 +70,7 @@ header button.menu {
 header .icon-menu,
 header button.mode {
     background-color: var(--bgheader);
+/* background-color: blue; */
     width: 4rem;
     border-radius: 80px;
     justify-content: center;
@@ -77,6 +78,8 @@ header button.mode {
     color: var(--subtitle);
     transition: 0.3s;
     border: none;
+    margin-right: 30px;
+    margin-top: 5px;
 }
 
 header button.mode {
