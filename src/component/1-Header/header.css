@@ -8,6 +8,7 @@ header.flex {
     justify-content: space-between;
     padding: 0 2.4rem;
     margin-top: 1.2rem;
+    align-items: center;
 }
 
 header.flex nav {
@@ -17,28 +18,25 @@ header.flex nav {
     padding: 0.77rem 1.6rem;
     border-radius: 55px;
     box-shadow: 1px 1px 40px rgba(144, 142, 142, 0.23);
-
 }
 
 header .flex a {
     color: var(--title);
+    text-decoration: none;
 }
 
-
-
-
+/* Navbar container */
 .allnav {
-    
     display: flex;
     flex-direction: row;
     gap: 40px;
     align-items: center;
     justify-content: center;
-    list-style-type: none; 
-    padding: 0; 
+    list-style-type: none;
+    padding: 0;
 }
 
-
+/* Navbar link styles */
 .navbar .nav-link {
     color: var(--title);
     opacity: 0.6;
@@ -46,84 +44,91 @@ header .flex a {
     font-weight: 400;
     transition: 0.3s;
     text-decoration: none;
-    margin-right: 30px; 
-    
+    margin-right: 30px;
 }
 
-
 .navbar .nav-link:hover {
-    color:aqua;
+    color: aqua;
     opacity: 1;
     font-size: 2rem;
     font-weight: 500;
-    text-decoration:underline;
+    text-decoration: underline;
 }
 
 /* ---------------------------------------------------
-2-button and icon
+2-button and icon (theme toggle and hamburger)
 --------------------------------------------------- */
 header button {
-
     font-size: 1.2rem;
 }
 
-
+/* Hamburger menu is hidden by default on desktop */
 header button.menu {
     display: none;
 }
 
-
 header .icon-menu,
 header button.mode {
     background-color: var(--bgheader);
-    /* height: 2rem; */
     width: 4rem;
     border-radius: 80px;
     justify-content: center;
     align-items: center;
-    /* text-align: center; */
     color: var(--subtitle);
-    /* border: 1px solid rgba(244, 165, 96, 0.249); */
     transition: 0.3s;
-    /* box-shadow: 1px 1px 40px rgba(35, 35, 36, 0.165); */
-    /* margin-top: .5rem; */
     border: none;
-
 }
 
-header button.mode{
-    /* margin-top: 20px; */
+header button.mode {
     margin-left: 20px;
 }
 
-
-header .icon-menu:hover,
-header button.mode:hover {
-    /* color: var(--title); */
-    /* border: 1px solid rgb(244, 165, 96); */
-
+/* Offcanvas menu for mobile */
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    left: -100%; /* Hidden by default */
+    width: 250px;
+    height: 100%;
+    background-color: grey;
+    padding-top: 2rem;
+    transition: left 0.3s ease;
+    z-index: 100;
 }
 
-header .icon-close {
+.mobile-nav.show {
+    left: 0; /* Slide in on mobile */
+}
+
+.mobile-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mobile-nav ul li {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.mobile-nav ul li a {
+    color: var(--title);
     font-size: 1.5rem;
-    color: var(--subtitle);
-    transition: 0.3s;
-
+    text-decoration: none;
 }
 
-header .icon-close:hover {
-    font-size: 1.8rem;
-    color: crimson;
-    rotate: 180deg;
-
-}
-
-header .icon-sun {
-    color: rgb(255, 165, 0);
+/* Close button styles */
+.close-menu {
+    position: absolute;
+    top: 1rem;
+    right: 5.7rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
 /* --------------------------------------------------
-3-model 
+3-model (Mobile menu modal)
 -------------------------------------------------- */
 header .fixed {
     position: fixed;
@@ -133,77 +138,60 @@ header .fixed {
     backdrop-filter: blur(4px);
 }
 
-
-@keyframes mymove {
-    0% {
-        scale: 0;
-    }
-
-    60% {
-        scale: 1.2;
-    }
-
-    100% {
-        scale: 1;
-    }
-}
-
-
-header .fixed ul.model {
-    animation: mymove 0.7s 1;
-
-    width: 75%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2rem;
-    border-radius: 1rem;
-    padding: 1rem 2rem;
-    background-color: var(--secondry);
-
-
-
-}
-
-header .fixed ul.model li {
-    border-bottom: 1px solid var(--border);
-    padding-bottom: 0.77rem;
-    padding-top: 0.5rem;
-}
-
-header .fixed ul.model li:first-child {
-    text-align: right;
-    border: none;
-    padding-bottom: 0;
-    padding-top: 0.2rem;
-    margin-bottom: -2rem;
-}
-
-header .fixed ul.model li:last-child {
-    border: none;
-}
-
-header .fixed ul.model li a {
-    font-size: 1rem;
-}
-
-
 /* ----------------------------------------------
 4-responsive design
 ---------------------------------------------- */
-@media (max-width: 600px) {
+
+/* Hide default navbar and show hamburger on mobile */
+@media (max-width: 768px) {
     header.flex nav {
         display: none;
-
-
     }
 
     header button.menu {
-        display: block;
+        display: block; /* Show the hamburger icon */
     }
 
+    .mobile-nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        background-color: var(--navbar-background);
+        text-align: center;
+    }
+
+    .mobile-nav ul li {
+        padding: 1rem;
+    }
+
+    .menu {
+        display: block; /* Show hamburger icon on mobile */
+    }
 }
 
+/* Show the default navbar on larger screens */
+@media (min-width: 769px) {
+    .menu {
+        display: none; /* Hide hamburger icon on desktop */
+    }
 
+    .allnav .nav {
+        display: flex; /* Show navbar links on desktop */
+    }
+
+    .mobile-nav {
+        display: none; /* Hide mobile nav on desktop */
+    }
+}
+
+/* Theme toggle position */
+.mode {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+/* Light and dark theme styles */
 body.light {
     background-color: white;
     color: black;
@@ -213,4 +201,3 @@ body.dark {
     background-color: #242426;
     color: white;
 }
-
